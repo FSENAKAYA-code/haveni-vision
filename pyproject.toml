@@ -1,0 +1,20 @@
+[project]
+name = "haveni-vision"
+version = "0.1.0"
+description = "A local-first, interpretable cat coat-colour analysis prototype"
+requires-python = ">=3.12,<3.13"
+dependencies = ["numpy>=1.26", "opencv-python-headless>=4.9"]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
